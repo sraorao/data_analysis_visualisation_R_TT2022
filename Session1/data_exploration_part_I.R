@@ -110,8 +110,7 @@ median_population = median(              , na.rm = TRUE) # Base R
 # or
 
 owid_covid %>%                                                  # dplyr
-  summarise(median_pop = median(owid_covid$population, na.rm = TRUE)) %>%
-  pull(median_pop) -> median_population
+  
 
 # Now we need to create a new column indicating whether the population for each
 # country is lower or higher than the median population, using mutate() and if_else()
